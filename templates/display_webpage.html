@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WEBPAGE PAGE</title>
+    <style>
+        *
+        {
+            background-color: rebeccapurple;
+        }
+        table
+        {
+            color: yellow;
+        }
+        h4
+        {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>DISPLAY WEBPAGE</h1>
+        <table border="3px">
+            <tr>
+                <th>TOPIC NAME</th>
+                <th>NAME</th>
+                <th>URL</th>
+            </tr>
+            {% for wo in webpages %}
+            <tr>
+                <td>{{ wo.topic_name }}</td>
+                <td>{{ wo.name }}</td>
+                <td>{{ wo.url }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>

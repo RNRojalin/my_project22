@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WEBPAGE PAGE</title>
+    <style>
+        *
+        {
+            background-color: white;
+        }
+        table
+        {
+            color: yellow;
+        }
+        h1
+        {
+            background: linear-gradient(to right,red,blue);
+            color: transparent;
+            -webkit-background-clip:text;            
+            text-shadow: 0 0 60px rgba(255, 0, 0, 0.457);
+            animation: anime 1s infinite alternate;
+        }
+        @keyframes anime{
+            100%{
+                text-shadow: 0 0 60px rgba(21, 0, 255, 0.457);
+            }
+        }
+        #my{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>DISPLAY WEBPAGE</h1>
+        <form method="POST">
+            {% csrf_token %}
+
+            <label for="tn">Topic_Name</label>
+
+            <select name="tn" id="tn" multiple>
+
+                {% for to in topics %}
+                    <option value="{{to.topic_name}}">{{to.topic_name}}</option>
+                {% endfor %}
+            </select>
+<br><br>
+            <input type="submit" value="submit" id="my">
+    </center>
+</body>
+</html>

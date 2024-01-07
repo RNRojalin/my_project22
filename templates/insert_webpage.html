@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>WEBPAGE REGISTRATION PAGE</h1>
+        <table border="2px">
+            <form method="POST">
+                {% csrf_token %}
+                <tr>
+                    <td><label for="tn">Topic Name</label></td>
+                    <td><input type="text" name="tn" id="tn"></td>
+                </tr>
+                <tr>
+                    <td><label for="n">Name</label></td>
+                    <td><input type="text" name="n" id="n"></td>
+                </tr>
+                <tr>
+                    <td><label for="u">URL</label></td>
+                    <td><input type="url" name="u" id="u"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit"></td>
+                </tr>
+            </form>
+        </table>
+    </center>
+</body>
+</html>

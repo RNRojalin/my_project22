@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TOPIC PAGE</title>
+    <style>
+        *
+        {
+            background-color: darkgreen;
+        }
+        table
+        {
+            color: yellow;
+        }
+        h4
+        {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>DISPLAY TOPIC</h1>
+        <table border="3px">
+            <tr>
+                <th>TOPIC NAME</th>
+            </tr>
+            {% for to in topics %}
+            <tr>
+                <td>{{ to.topic_name }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>

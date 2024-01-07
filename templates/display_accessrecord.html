@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ACCESSRECORD PAGE</title>
+    <style>
+        *
+        {
+            background-color: darkcyan;
+        }
+        table
+        {
+            color: darkblue;
+        }
+        h4
+        {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>DISPLAY ACCESSRECORD</h1>
+        <table border="3px">
+            <tr>
+                <th>NAME</th>
+                <th>DATE</th>
+                <th>AUTHOR</th>
+            </tr>
+            {% for ao in accessrecords %}
+            <tr>
+                <td>{{ ao.name }}</td>
+                <td>{{ ao.date}}</td>
+                <td>{{ ao.author }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
